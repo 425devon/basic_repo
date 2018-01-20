@@ -1,0 +1,67 @@
+###Step1 create repository on GitHub
+
+devon@devon-ThinkPad-T430:~/Desktop(master)$ mkdir basic_repo
+devon@devon-ThinkPad-T430:~/Desktop(master)$ cd basic_repo/
+devon@devon-ThinkPad-T430:~/Desktop/basic_repo(master)$ echo "# basic_repo" >> README.md
+devon@devon-ThinkPad-T430:~/Desktop/basic_repo(master)$ git init
+Initialized empty Git repository in /home/devon/Desktop/basic_repo/.git/
+devon@devon-ThinkPad-T430:~/Desktop/basic_repo$ git add README.md
+devon@devon-ThinkPad-T430:~/Desktop/basic_repo$ git commit -m "first commit"
+[master (root-commit) 6d88625] first commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.md
+devon@devon-ThinkPad-T430:~/Desktop/basic_repo(master)$ git remote add origin https://github.com/425devon/basic_repo.git
+devon@devon-ThinkPad-T430:~/Desktop/basic_repo(master)$ git push -u origin master
+Username for 'https://github.com': 425devon
+Password for 'https://425devon@github.com': 
+Counting objects: 3, done.
+Writing objects: 100% (3/3), 229 bytes | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/425devon/basic_repo.git
+ * [new branch]      master -> master
+Branch master set up to track remote branch master from origin.
+devon@devon-ThinkPad-T430:~/Desktop/basic_repo(master)$ git branch
+* master
+devon@devon-ThinkPad-T430:~/Desktop/basic_repo(master)$ touch basic.html
+devon@devon-ThinkPad-T430:~/Desktop/basic_repo(master)$ touch basic_style.css
+devon@devon-ThinkPad-T430:~/Desktop/basic_repo(master)$ ls
+basic.html  basic_style.css  README.md
+devon@devon-ThinkPad-T430:~/Desktop/basic_repo(master)$ code .
+devon@devon-ThinkPad-T430:~/Desktop/basic_repo(master)$ git add .
+devon@devon-ThinkPad-T430:~/Desktop/basic_repo(master)$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   basic.html
+	new file:   basic_style.css
+
+devon@devon-ThinkPad-T430:~/Desktop/basic_repo(master)$ git commit -m "created html boiler plate and css files"
+[master 03a74d8] created html boiler plate and css files
+ 2 files changed, 15 insertions(+)
+ create mode 100644 basic.html
+ create mode 100644 basic_style.css
+devon@devon-ThinkPad-T430:~/Desktop/basic_repo(master)$ git push origin master
+Username for 'https://github.com': 425devon
+Password for 'https://425devon@github.com': 
+Counting objects: 4, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 562 bytes | 0 bytes/s, done.
+Total 4 (delta 0), reused 0 (delta 0)
+To https://github.com/425devon/basic_repo.git
+   6d88625..03a74d8  master -> master
+devon@devon-ThinkPad-T430:~/Desktop/basic_repo(master)$ git log
+commit 03a74d8750d98ffcac48ff5de115b74fcfe352a1
+Author: Devon Langendoerfer <425devon@gmail.com>
+Date:   Fri Jan 19 21:27:26 2018 -0800
+
+    created html boiler plate and css files
+
+commit 6d88625ceca54fc628b457a0e9e2e5917135f264
+Author: Devon Langendoerfer <425devon@gmail.com>
+Date:   Fri Jan 19 21:21:08 2018 -0800
+
+    first commit
+devon@devon-ThinkPad-T430:~/Desktop/basic_repo(master)$ 
